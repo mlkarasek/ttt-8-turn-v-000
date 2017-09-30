@@ -11,8 +11,8 @@ def turn(board)
      input = gets.strip
    end
  end
- 
- 
+
+
    def display_board(board)
     puts " #{board[0]} | #{board[1]} | #{board[2]} "
      puts "-----------"
@@ -24,11 +24,11 @@ def turn(board)
    def input_to_index(input)
      input = input.to_i-1
    end
- 
+
    def move(board, input, value="X")
      board[input] = value
    end
- 
+
    def valid_move?(board, index)
        if index == nil || index < 0 || index > 8
          false
@@ -38,7 +38,7 @@ def turn(board)
          true
        end
    end
- 
+
    def position_taken?(board, index)
      if board[index] == "X" || board[index] ==  "O"
       true
